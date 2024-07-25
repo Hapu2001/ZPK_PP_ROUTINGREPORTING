@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control Routing Report'
+@MappingRole: true
+define role ZPP_AC_ROUTINGREPOORT {
+    grant
+        select
+            on
+                ZPP_I_ROUTINGREPORT
+                    where
+                        (Plant, 'ZPP01') = aspect pfcg_auth(ZAO_PLANTS, ZAF_PLANTS, ZAF_TCODE, ACTVT= '03');
+                        
+}

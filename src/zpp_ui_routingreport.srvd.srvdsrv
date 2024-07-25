@@ -1,0 +1,4 @@
+@EndUserText.label: 'UI Routing Report'
+define service ZPP_UI_ROUTINGREPORT {
+  expose ZPP_I_ROUTINGREPORT;
+}

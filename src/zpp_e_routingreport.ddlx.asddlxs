@@ -1,0 +1,40 @@
+@Metadata.layer: #CORE
+annotate view ZPP_I_ROUTINGREPORT
+    with 
+{   
+  @Consumption.filter: {selectionType: #RANGE, mandatory: true}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PlantStdVH', element: 'Plant'}}]
+  @UI.selectionField: [{ position: 1 }]
+  Plant;
+  
+  @Consumption.filter: {selectionType: #RANGE}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_ProductText_SVH', element: 'Product'}}]
+  @UI.selectionField: [{ position: 2 }]
+  Product;
+  
+  @Consumption.filter: {selectionType: #RANGE}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_BillOfOperationsGroup', element: 'BillOfOperationsGroup'},
+                                     additionalBinding: [{ element: 'BillOfOperationsType', localElement: 'BillOfOperationsType'  , usage: #FILTER}]}]
+  @UI.selectionField: [{ position: 3 }]
+  BillOfOperationsGroup;
+  
+  @Consumption.filter: {selectionType: #RANGE}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_MfgBOOMaterialAssignment', element: 'BillOfOperationsVariant'}}]
+  @UI.selectionField: [{ position: 4 }]
+  BillOfOperationsVariant;
+  
+  @Consumption.filter: {selectionType: #RANGE}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_WorkCenterText', element: 'WorkCenterInternalID'}}]
+  @UI.selectionField: [{ position: 5 }]
+  WorkCenter;
+  
+  @Consumption.filter: {selectionType: #RANGE}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProductTypeText_2', element: 'ProductType'}}]
+  @UI.selectionField: [{ position: 6 }]
+  ProductType;
+  
+  @Consumption.filter: {selectionType: #RANGE}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProductGroupText_2', element: 'ProductGroup'}}]
+  @UI.selectionField: [{ position: 7 }]
+  ProductGroup;
+}
